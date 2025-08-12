@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eveno.cr - Creative Design Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="folder_foto_evenno/logo.jpg" alt="Eveno Logo" class="logo" />
+                <h2>eveno.cr</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+               <h1 class="hero-title">
+                             Creative<span class="gradient-text"> Environment</span>
+                        </h1>
+
+
+                <p class="hero-description">
+                    We bring your vision to life through exceptional graphic design, 
+                    stunning illustrations, and captivating photography that tells your story.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">🎨</div>
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">✏️</div>
+                    <h3>Illustration</h3>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">📸</div>
+                    <h3>Photography</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive creative solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21,15 16,10 5,21"/>
+                        </svg>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Brand identity, logos, marketing materials, and visual communication that makes your brand stand out.</p>
+                    <ul class="service-features">
+                        <li>Branding</li>
+                        <li>Logo Creation</li>
+                        <li>Poster</li>
+                        <li>Feed IG</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 9 5 12 1.774-5.226L21 14 9 9z"/>
+                            <path d="m16.071 16.071 4.243 4.243"/>
+                            <path d="m7.188 2.239.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656-2.12 2.122"/>
+                        </svg>
+                    </div>
+                    <h3>Illustration</h3>
+                    <p>Custom illustrations, digital art, and creative visuals that bring concepts to life with artistic flair.</p>
+                    <ul class="service-features">
+                        <li>Custom Ilustrasi</li>
+                        <li>Karakter Lucu</li>
+                        <li>Visual Storytelling</li>
+                        <li>Komik Mini</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                            <circle cx="12" cy="13" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Professional photography services including product, portrait, and commercial photography.</p>
+                    <ul class="service-features">
+                        <li>Produk Lifestyle</li>
+                        <li>Behind the scenes</li>
+                        <li>Dokumentasi event</li>
+                        <li>Personal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">My Creative Portfolio</h1>
+            <p class="subtitle">Explore my work through categories</p>
+        </header>
+
+        <!-- Folder View -->
+        <div id="folderView" class="folder-view">
+            <div class="folders-grid">
+                <div class="folder-item" data-category="design" onclick="openFolder('design')">
+                    <div class="folder-icon">
+                        <div class="folder-back"></div>
+                        <div class="folder-front">
+                            <div class="folder-tab"></div>
+                            <div class="folder-content">
+                                <div class="folder-icon-inner">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="folder-title">Design Grafis</h3>
+                    <p class="folder-description">Brand identity & menu design</p>
+                    <span class="folder-count" id="designCount">2 items</span>
+                </div>
+
+                <div class="folder-item" data-category="illustration" onclick="openFolder('illustration')">
+                    <div class="folder-icon">
+                        <div class="folder-back"></div>
+                        <div class="folder-front">
+                            <div class="folder-tab"></div>
+                            <div class="folder-content">
+                                <div class="folder-icon-inner">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <polyline points="21,15 16,10 5,21"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="folder-title">Illustration</h3>
+                    <p class="folder-description">Character design & digital art</p>
+                    <span class="folder-count" id="illustrationCount">6 items</span>
+                </div>
+
+                <div class="folder-item" data-category="photography" onclick="openFolder('photography')">
+                    <div class="folder-icon">
+                        <div class="folder-back"></div>
+                        <div class="folder-front">
+                            <div class="folder-tab"></div>
+                            <div class="folder-content">
+                                <div class="folder-icon-inner">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                        <circle cx="12" cy="13" r="4"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="folder-title">Photography</h3>
+                    <p class="folder-description">Portrait & product photography</p>
+                    <span class="folder-count" id="photographyCount">5 items</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery View -->
+        <div id="galleryView" class="gallery-view hidden">
+            <div class="gallery-header">
+                <button class="back-btn" onclick="closeFolder()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"/>
+                    </svg>
+                    Back to Folders
+                </button>
+                <h2 id="categoryTitle" class="category-title"></h2>
+            </div>
+            
+            <div id="portfolioGrid" class="portfolio-grid">
+                <!-- Portfolio items will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox hidden">
+            <div class="lightbox-content">
+                <button class="lightbox-close" onclick="closeLightbox()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+                <button class="lightbox-prev" onclick="previousImage()" style="display: none;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"/>
+                    </svg>
+                </button>
+                <button class="lightbox-next" onclick="nextImage()" style="display: none;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"/>
+                    </svg>
+                </button>
+                <img id="lightboxImage" src="" alt="">
+                <div class="lightbox-counter" style="display: none;"></div>
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       // Portfolio data organized by category
+const portfolioData = {
+    design: [
+        {
+            id: 1,
+            title: "Desain Menu L Coffee",
+            description: "Professional menu design for coffee shop branding",
+            image: "folder_foto_evenno/menu1.jpg",
+            images: [
+                "folder_foto_evenno/menu1.jpg",
+                "folder_foto_evenno/menu2.jpg",
+                "folder_foto_evenno/menu3.jpg"
+            ]
+        },
+       
+    ],
+    illustration: [
+        {
+            id: 3,
+            title: "Comic Character Design",
+            description: "Custom character design for comic series",
+            image: "folder_foto_evenno/comic1.jpg",
+            images: [
+                "folder_foto_evenno/comic1.jpg",
+                "folder_foto_evenno/comic2.jpg"
+               
+            ]
+        },
+        {
+            id: 4,
+            title: "Mascot Ayam Kardus",
+            description: "Brand mascot illustration for packaging design",
+            image: "folder_foto_evenno/maskot ayam basic.jpg",
+            images: [
+                "folder_foto_evenno/maskot_ayam_basic.jpg",
+                "folder_foto_evenno/ayam2.jpg",
+                "folder_foto_evenno/ayam3.jpg"
+            ]
+        },
+        {
+            id: 5,
+            title: "Outfit Character (OUTCHAR)",
+            description: "Illustration for  Outfit Character ",
+            image: "folder_foto_evenno/outchar1.jpg",
+            images: [
+                "folder_foto_evenno/outchar2.jpg",
+                "folder_foto_evenno/outchar3.jpg",
+                "folder_foto_evenno/outchar1.jpg"
+            ]
+        },
+        {
+            id: 6,
+            title: "Clear Cup L coffee",
+            description: "Illustration for clear cup L coffee",
+            image: "folder_foto_evenno/illustrationp_cupL_coffee.jpg",
+            images: [
+                "folder_foto_evenno/illustration_cupL_coffee.jpg",
+                "folder_foto_evenno/cupLcoffee2.jpg",
+       
+            ]
+        },
+        {
+            id: 7,
+            title: "Logo Koko Matcha",
+            description: "Make Illustration for UMKM",
+            image: "folder_foto_evenno/km.jpg",
+            images: [
+                "folder_foto_evenno/km.jpg",
+                "folder_foto_evenno/km2.jpg",
+            ]
+        },
+        {
+            id: 8,
+            title: "Cover Pundak Remaja",
+            description: "Make Cover Pundak Remaja",
+            image: "folder_foto_evenno/coverpundakremaja.jpg",
+            images: [
+                "folder_foto_evenno/coverpundakremaja.jpg",
+                "folder_foto_evenno/coverpundakremaja2.jpg",
+        ]
+        },
+         {
+            id: 8,
+            title: "Octopus Food Illustration",
+            description: "Octopus Food Illustration",
+            image: "folder_foto_evenno/octopus_food_illustration.jpg",
+            images: [
+                "folder_foto_evenno/octopus_food_illustration.jpg"
+              
+        ]
+        },
+         {
+            id: 8,
+            title: "Request illustration",
+            description: "Request Illustration",
+            image: "folder_foto_evenno/request_illustration.jpg",
+            images: [
+                "folder_foto_evenno/request_illustration.jpg"
+              
+        ]
+        }
+    ],
+    
+    
+    photography: [
+        {
+            id: 9,
+            title: "Food Photography",
+            description: "Professional Food Photoghaphy",
+            image: "folder_foto_evenno/spagetti1.jpg",
+            images: [
+                "folder_foto_evenno/spagetti1.jpg",
+                "folder_foto_evenno/spagetti2.jpg",
+                "folder_foto_evenno/spageti3.jpg",
+                "folder_foto_evenno/spageti4.jpg"
+                
+            ]
+        },
+        {
+            id: 10,
+            title: "LWDC FH UNILA",
+            description: "collaboration with organitation",
+            image: "folder_foto_evenno/fh1.jpg",
+            images: [
+              "folder_foto_evenno/fh1.jpg",
+              "folder_foto_evenno/fh2.jpg",
+              "folder_foto_evenno/fh3.jpg",
+              "folder_foto_evenno/fh4.jpg"
+            ]
+        },
+        {
+            id: 11,
+            title: "Personal Photo After Graduation",
+            description: "Professional personal after graduation photography series",
+            image: "folder_foto_evenno/cindy1.jpg",
+            images: [
+                "folder_foto_evenno/cindy1.jpg",
+                "folder_foto_evenno/cindy2.jpg",
+                "folder_foto_evenno/cindy3.jpg",
+                "folder_foto_evenno/cindy4.jpg"
+            ]
+        },
+        {
+            id: 12,
+            title: "Personal for Birthday Photography",
+            description: "Birthday personal photography",
+            image: "folder_foto_evenno/obet.jpg",
+            images: [
+              "folder_foto_evenno/obet.jpg",
+              "folder_foto_evenno/obet2.jpg",
+              "folder_foto_evenno/obet3.jpg",
+              "folder_foto_evenno/obet4.jpg"      
+        ]
+        },
+        {
+            id: 13,
+            title: "Studio Photo Group",
+            description: "Profesional Photo Group Section",
+            image: "folder_foto_evenno/asisi_dancer.jpg",
+            images: [
+                "folder_foto_evenno/asisi_dancer.jpg",
+                "folder_foto_evenno/asisi2.jpg",
+                "folder_foto_evenno/asisi3.jpg",
+                "folder_foto_evenno/asisi4.jpg"
+            ]
+        }
+    ]
+};
+
+// Category information
+const categoryInfo = {
+    design: {
+        title: "Design Grafis",
+        description: "Brand identity & menu design"
+    },
+    illustration: {
+        title: "Illustration",
+        description: "Character design & digital art"
+    },
+    photography: {
+        title: "Photography", 
+        description: "Portrait & product photography"
+    }
+};
+
+// DOM elements
+const folderView = document.getElementById('folderView');
+const galleryView = document.getElementById('galleryView');
+const portfolioGrid = document.getElementById('portfolioGrid');
+const categoryTitle = document.getElementById('categoryTitle');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxDescription = document.getElementById('lightboxDescription');
+
+// Current state
+let currentCategory = null;
+let currentImageIndex = 0;
+let currentImages = [];
+
+// Initialize the app
+function init() {
+    updateFolderCounts();
+    // Add click outside lightbox to close
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (!lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            } else if (currentCategory) {
+                closeFolder();
+            }
+        } else if (!lightbox.classList.contains('hidden')) {
+            if (e.key === 'ArrowLeft') {
+                previousImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+        }
+    });
+}
+
+// Update folder counts
+function updateFolderCounts() {
+    document.getElementById('designCount').textContent = `${portfolioData.design.length} items`;
+    document.getElementById('illustrationCount').textContent = `${portfolioData.illustration.length} items`;
+    document.getElementById('photographyCount').textContent = `${portfolioData.photography.length} items`;
+}
+
+// Open folder and show gallery
+function openFolder(category) {
+    currentCategory = category;
+    
+    // Update category title
+    categoryTitle.textContent = categoryInfo[category].title;
+    
+    // Generate portfolio items
+    generatePortfolioItems(category);
+    
+    // Animate transition
+    folderView.classList.add('slide-out');
+    
+    setTimeout(() => {
+        folderView.classList.add('hidden');
+        galleryView.classList.remove('hidden');
+        
+        // Trigger reflow
+        galleryView.offsetHeight;
+        
+        galleryView.classList.add('active');
+    }, 250);
+}
+
+// Close folder and show folder view
+function closeFolder() {
+    galleryView.classList.remove('active');
+    
+    setTimeout(() => {
+        galleryView.classList.add('hidden');
+        folderView.classList.remove('hidden', 'slide-out');
+        currentCategory = null;
+    }, 250);
+}
+
+// Generate portfolio items for category
+function generatePortfolioItems(category) {
+    const items = portfolioData[category];
+    portfolioGrid.innerHTML = '';
+    
+    items.forEach((item, index) => {
+        const portfolioItem = document.createElement('div');
+        portfolioItem.className = 'portfolio-item';
+        portfolioItem.onclick = () => openLightbox(item);
+        
+        portfolioItem.innerHTML = `
+            <div class="portfolio-image">
+                <img src="${item.image}" alt="${item.title}" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                </div>
+            </div> 
+            `;
+        
+        portfolioGrid.appendChild(portfolioItem);
+        
+        // Add staggered animation
+        setTimeout(() => {
+            portfolioItem.style.opacity = '1';
+            portfolioItem.style.transform = 'translateY(0)';
+        }, index * 100);
+    });
+    
+    // Set initial state for animation
+    const allItems = portfolioGrid.querySelectorAll('.portfolio-item');
+    allItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    });
+}
+
+// Open lightbox with image
+function openLightbox(item) {
+    currentImages = item.images || [item.image];
+    currentImageIndex = 0;
+    
+    updateLightboxContent(item);
+    
+    lightbox.classList.remove('hidden');
+    
+    // Trigger reflow
+    lightbox.offsetHeight;
+    
+    lightbox.classList.add('active');
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+// Update lightbox content
+function updateLightboxContent(item) {
+    lightboxImage.src = currentImages[currentImageIndex];
+    lightboxImage.alt = item.title;
+    lightboxTitle.textContent = item.title;
+    lightboxDescription.textContent = item.description;
+    
+    // Update navigation visibility
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    const counter = document.querySelector('.lightbox-counter');
+    
+    if (currentImages.length > 1) {
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+        counter.style.display = 'block';
+        counter.textContent = `${currentImageIndex + 1} / ${currentImages.length}`;
+    } else {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+        counter.style.display = 'none';
+    }
+}
+
+// Navigate to previous image
+function previousImage() {
+    if (currentImages.length > 1) {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        const currentItem = getCurrentItem();
+        if (currentItem) {
+            updateLightboxContent(currentItem);
+        }
+    }
+}
+
+// Navigate to next image
+function nextImage() {
+    if (currentImages.length > 1) {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        const currentItem = getCurrentItem();
+        if (currentItem) {
+            updateLightboxContent(currentItem);
+        }
+    }
+}
+
+// Get current item from portfolio data
+function getCurrentItem() {
+    for (const category in portfolioData) {
+        for (const item of portfolioData[category]) {
+            if (item.images && item.images.includes(currentImages[0])) {
+                return item;
+            }
+        }
+    }
+    return null;
+}
+
+// Close lightbox
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    
+    setTimeout(() => {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', init);
+
+// Add some performance optimizations
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Add resize handler for responsive behavior
+const handleResize = debounce(() => {
+    // Add any resize-specific logic here if needed
+}, 250);
+
+window.addEventListener('resize', handleResize);
+    </script>
+
+   
+
+
+  <section id="about" class="about-section">
+  <div class="container about-container">
+    <div class="about-image">
+      <img src="folder_foto_evenno/logo.jpg" alt="Eveno Team" />
+    </div>
+    <div class="about-content">
+      <h2>About <span class="gradient-text">eveno.cr</span></h2>
+      <p class="intro">
+        eveno.cr adalah studio kreatif multidisiplin yang menggabungkan desain grafis, ilustrasi karakter, dan fotografi untuk menciptakan karya visual yang memikat dan bermakna.
+      </p>
+      <p>
+        Kami percaya bahwa desain yang baik bukan hanya soal estetika, tetapi juga komunikasi. Dengan pendekatan yang kolaboratif dan penuh semangat, kami membantu klien kami menceritakan cerita mereka melalui visual yang kuat dan strategis.
+      </p>
+      <p>
+        Dari brand identity, komik visual, hingga fotografi produk dan dokumentasi, kami menghadirkan solusi kreatif yang dirancang untuk menyampaikan pesan, membangun koneksi, dan memberikan kesan yang mendalam.
+      </p>
+      <div class="about-tags">
+        <span>✨ Kreatif</span>
+        <span>🎨 Artistik</span>
+        <span>📸 Profesional</span>
+        <span>🤝 Kolaboratif</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Ready to start your next creative project? Let's discuss your vision</p>
+            </div>
+            <div class="contact-content">
+  <!-- LOCATION -->
+  <div class="contact-item">
+    <div class="contact-icon">
+      <!-- Location Icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    </div>
+    <h3>Location</h3>
+    <p>Villa Citra 1</p>
+    <p>BandarLampung</p>
+  </div>
+
+  <!-- EMAIL -->
+  <div class="contact-item">
+    <div class="contact-icon">
+      <!-- Email Icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </div>
+    <h3>Email</h3>
+    <p>Evenocreative@gmail.com</p>
+  </div>
+
+  <!-- PHONE -->
+  <div class="contact-item">
+    <div class="contact-icon">
+      <!-- Phone Icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+    </div>
+    <h3>Phone</h3>
+    <p>085366279792</p>
+    <p>085767150257</p>
+    <p>089602830166</p>
+  </div>
+</div>
+
+             </section>
+                
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-content" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <div class="footer-brand">
+        <h3>eveno.cr</h3>
+        <p>Creative design solutions that inspire and engage.</p>
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Graphic Design</a></li>
+            <li><a href="#services">Illustration</a></li>
+            <li><a href="#services">Photography</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/eveno.cr?igsh=MTQ3MXpnMXd3czAyeg== " class="social-link">@eveno.cr</a>
+            <a href="https://www.instagram.com/evenolens?igsh=MWlkeXFuOTZsYWRybw== " class="social-link">@evenolens</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div clasilustrasi 2.jpgs="footer-bottom">
+      <p>&copy; 2025 eveno.cr. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
